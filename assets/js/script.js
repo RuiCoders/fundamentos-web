@@ -24,7 +24,8 @@ function validaNome () {
     let txtNome = document.querySelector('#txtNome')
     if (nome.value.length <=2) {
         txtNome.innerHTML = 'Nome Inválido'
-        txtNome.style.color = 'red'  
+        txtNome.style.color = 'red' 
+        let nomeOk = false 
      }else {
         txtNome.innerHTML = 'Nome Valido'
         txtNome.style.color = 'blue'
@@ -38,6 +39,7 @@ function validaEmail() {
     if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
         txtEmail.innerHTML = 'E-mail Valido'
         txtEmail.style.color = 'red'
+        let emailOk = false
     }else {
         txtEmail.innerHTML = 'E-mail Valido'
         txtEmail.style.color = 'blue'
@@ -52,6 +54,7 @@ function validaAssunto() {
         txtAssunto.innerHTML = 'Texto está muito grande, ditige no maximo 100 caracteres'
         txtAssunto.style.color = 'red'
         txtAssunto.style.display= 'block'
+        let asssuntoOk = false
     }else {
         txtAssunto.style.display = 'none'
         assuntoOk = true
